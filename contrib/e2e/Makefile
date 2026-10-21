@@ -41,7 +41,7 @@ $(CACHE)/aktualizr-lite:
 # Build fiopull from source using a throwaway Go container.
 $(CACHE)/fiopull:
 	mkdir -p $(CACHE)
-	docker run --rm -v $(CACHE):/out golang:1.24 sh -c "\
+	docker run --rm -v $(CACHE):/out golang:1.27.3 sh -c "\
 		git clone --depth=1 https://github.com/foundriesio/ostreeuploader.git /src && \
 		cd /src && make fiopull && cp bin/fiopull /out/fiopull"
 

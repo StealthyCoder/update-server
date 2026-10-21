@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause-Clear
 
 # Stage 1: build fioserver and gen-certs from source
-FROM public.ecr.aws/docker/library/golang:1.25 AS builder
+FROM public.ecr.aws/docker/library/golang:1.27.3 AS builder
 
 # hack for building on QC managed laptops
 RUN --mount=target=/ctx \
