@@ -8,9 +8,9 @@ import (
 	"mime"
 	"net/http"
 	"path/filepath"
+	"uuid"
 
 	"github.com/foundriesio/update-server/storage"
-	"github.com/google/uuid"
 	"github.com/labstack/echo/v4"
 )
 

@@ -343,7 +343,7 @@ func streamUpdateLogs(c echo.Context, reader iter.Seq2[string, error]) error {
 	}
 
 	// Errors are already handled by the eventStreamReader
-	for line := range keepaliveReader(eventStreamReader) {
+	for line := range keepaliveReader(eventStreamReader) { //nolint:errcheck
 		if _, err := r.Write([]byte(line)); err != nil {
 			// Client disconnected - only log unexpected errors
 			if !errors.Is(err, io.EOF) && !errors.Is(err, net.ErrClosed) {
