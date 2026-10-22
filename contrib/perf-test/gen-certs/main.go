@@ -21,8 +21,7 @@ import (
 	"runtime"
 	"sync"
 	"time"
-
-	"github.com/google/uuid"
+	"uuid"
 )
 
 func main() {
